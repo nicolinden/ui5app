@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout">
+
+    <Dialog class="darkDialog"> 
+    	<customHeader>
+    		<Bar>
+    			<contentMiddle>
+    				<Title text="Enter text ({path: 'viewModel>/liveTimer', formatter: '.formatter.msToMinutesAndSeconds'})" />
+    			</contentMiddle>
+    			
+    			<contentRight>
+    				<Button icon="sap-icon://decline" type="Transparent" class="whiteTextButton" press="onCloseManualInput" />
+    			</contentRight>
+    		</Bar>
+    	</customHeader>
+
+        <HBox class="greyMessageBox" alignContent="Start" alignItems="Start" visible="{= ${viewModel>/alertText} !== ''}">
+            <core:Icon src="sap-icon://keyboard-and-mouse" class="sapUiTinyMargin" size="4em" />
+            <Text text="Your device does not seem capable of recording voice, so please use your keyboard" class="sapUiTinyMargin" />
+        </HBox>
+
+        <VBox class="sapUiTinyMarginBeginEnd">
+            <TextArea value="{viewModel>/textInput}" width="100%" class="sapUiNoMargin" growing="true" rows="1" valueLiveUpdate="true" />
+			<VBox width="100%">
+				<Button text="Confirm" width="100%" class="sapUiTinyMarginTopBottom" type="Accept" press="onConfirmInput" enabled="{= ${viewModel>/confirmEnabled} &amp;&amp; ${viewModel>/textInput} !== ''}" />
+			</VBox>            
+        </VBox>
+
+    </Dialog>
+</core:FragmentDefinition>

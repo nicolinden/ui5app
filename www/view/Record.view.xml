@@ -1,0 +1,42 @@
+<mvc:View 
+    controllerName="com.noki_online.ui5app.controller.Record"
+    xmlns:mvc="sap.ui.core.mvc"  
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+	displayBlock="true">
+	<Page showHeader="false">
+		<content>
+
+			<MessageStrip text="For best experience allow access to the microphone" visible="{= ${config>/SpeechRecognitionAvailable} &amp;&amp; ${config>/SystemDeniedAccess}}" type="Error" showIcon="true" class="sapUiSmallMargin" /> 
+
+            <VBox alignItems="Center" class="sapUiLargeMargin">
+
+                <Title text="Take Notes" titleStyle="H1" class="sapUiMediumMarginBottom"/>
+                <Text text="With this application you can take notes by speaking in the microphone, the app will save the time it took you to say the text together with the text itself" textAlign="Center" />
+
+                <HBox width="100%" justifyContent="Center" class="sapUiLargeMargin">
+                    <Button icon="sap-icon://microphone" class="blueButton" press="onRecordText" visible="{= !${viewModel>/recordingRunning} || ${viewModel>/androidDevice}}" />
+                    <Button icon="sap-icon://stop" class="redButton" press="onStopVoice" visible="{= ${viewModel>/recordingRunning} &amp;&amp; !${viewModel>/androidDevice} }" />
+                </HBox>
+                    <Label text="{path: 'viewModel>/liveTimer', formatter: '.formatter.msToMinutesAndSeconds'}" class="sapUiSmallMarginTop" visible="{viewModel>/recordingRunning}" />
+            </VBox>
+
+            <List items="{path: 'viewModel>/textData/', sorter: { path: 'title', descending: true } }" noDataText="No Text recorded yet" visible="{= ${viewModel>/textData}.length > 0}" >
+                <CustomListItem class="textList">
+                    <VBox alignItems="Center" alignContent="Center" class="greyMessageBox" >
+                        <Text text="{viewModel>title}" class="blueText sapUiTinyMarginTopBottom sapUiTinyMarginBeginEnd" />
+                        <Text text="{viewModel>time}" class="darkGreyText sapUiTinyMarginBottom sapUiTinyMarginBeginEnd" />
+                        <Text text="{viewModel>text}" class="greyText sapUiTinyMarginBottom sapUiTinyMarginBeginEnd" />                                                        
+                    </VBox>
+                </CustomListItem>
+            </List>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Text text="©2019 Noki-Online" class="greyText" />
+                <ToolbarSpacer />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

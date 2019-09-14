@@ -1,0 +1,25 @@
+{ 
+    "ScoreBoard": [
+		{
+			"TeamID": 1,
+            "TeamName": "Belgium", 
+            "TeamImage": "images/flags/belgium-flag.jpg",
+			"RoundScore": 10,
+			"TotalScore": 10
+		},
+		{
+			"TeamID": 2,
+			"TeamName": "The Netherlands", 
+            "TeamImage": "images/flags/netherlands-flag.jpg",
+            "RoundScore": 30,
+			"TotalScore": 30
+		},
+		{
+			"TeamID": 3,
+            "TeamName": "Slovenia", 
+            "TeamImage": "images/flags/slovenia-flag.jpg",            
+			"RoundScore": 20,
+			"TotalScore": 20
+		}
+	]
+}

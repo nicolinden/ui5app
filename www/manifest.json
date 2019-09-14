@@ -1,0 +1,123 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "com.noki_online.ui5app",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.3.8"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.noki_online.ui5app.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.noki_online.ui5app.i18n.i18n"
+				}
+			},
+			"mockData": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./model/mockdata.json"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.noki_online.ui5app.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "fade",
+				"bypassed": {
+					"target": [
+						"notFound"
+					]
+				},
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "splashscreen",
+					"target": [
+						"splashscreen"
+					]
+				}, {
+					"pattern": "record",
+					"name": "record",
+					"target": [
+						"record"
+					]
+				}
+			],
+			"targets": {
+
+				"splashscreen": {
+					"viewName": "Splashscreen",
+					"viewId": "Splashscreen",
+					"viewLevel": 1
+				},
+				"record": {
+					"viewName": "Record",
+					"viewId": "Record",
+					"viewLevel": 2
+				}				
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}

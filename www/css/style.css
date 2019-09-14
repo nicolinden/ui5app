@@ -1,0 +1,121 @@
+.coloredBox {
+    background-color: #878787;
+}
+
+.lightGreyText.sapMText {
+    color: #EAEAEA;
+}
+
+.blueButton .sapMBtnInner {
+	background-color: #0854A0;
+    border-style: none;
+    color: #ffffff;
+    height: 100px;
+    width: 100px;
+	font-size: 1.2em;
+	vertical-align: middle;
+	align-items: center;
+    padding-top: 32px;
+    padding-right: 7px;
+}
+
+.blueButton.sapMBtn:hover>.sapMBtnHoverable {
+    background-color: #3984F9;
+    border-style: none;
+    height: 100px;
+    width: 100px;
+	font-size: 1.2em;
+	vertical-align: middle;
+	align-items: center;
+    padding-top: 32px;
+    padding-right: 7px;
+}
+
+.redButton .sapMBtnInner {
+	background-color: #B21816;
+    border-style: none;
+    color: #ffffff;
+    height: 100px;
+    width: 100px;
+	font-size: 1.2em;
+	vertical-align: middle;
+	align-items: center;
+    padding-top: 32px;
+    padding-right: 20px;
+}
+
+.redButton.sapMBtn:hover>.sapMBtnHoverable {
+    background-color: rgb(205, 78, 76);
+    border-style: none;
+    height: 100px;
+    width: 100px;
+	font-size: 1.2em;
+	vertical-align: middle;
+	align-items: center;
+    padding-top: 32px;
+    padding-right: 20px;
+}
+
+.redButton .sapUiIcon {
+    font-size: 4em;
+    color: #ffffff
+}
+
+.blueButton .sapUiIcon {
+    font-size: 4em;
+    color: #ffffff
+}
+
+.greyMessageBox.sapMHBox {
+    background-color: #EAEAEA
+}
+
+.greyMessageBox.sapMVBox {
+    background-color: #EAEAEA
+}
+
+.darkDialog.sapMDialog.sapMPopup-CTX>header .sapMHeader-CTX {
+	background-color: #0854A0;
+}
+
+.darkDialog.sapMDialog>header.sapMDialogTitle .sapMTitle {
+	color: #ffffff;
+	text-shadow: none;
+}
+
+.whiteTextButton .sapUiIcon::before {
+	color: #ffffff;
+}
+
+.whiteTextButton.sapMBtn:hover>.sapMBtnHoverable {
+    background-color: #0854A0 !important;
+    border-style: none;
+    transform: scale(1.1);
+}
+
+.confirmButton.sapMBtnBase {
+    background-color: #B0AFB1 
+}
+
+.greyText.sapMText {
+    color: #797979;
+}
+
+.darkGreyText.sapMText {
+    color: #5E5E5E;
+}
+
+.blueText.sapMText {
+    color: #0854A0;
+    font-size: 1.2em;
+}
+
+.greyList {
+    background-color: #878787;    
+}
+
+.textList.sapMLIB {
+    background-color: #FFFFFF;
+	border-color: #FFFFFF;
+	border-style: solid;
+}
