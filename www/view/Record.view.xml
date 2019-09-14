@@ -21,7 +21,7 @@
                     <Label text="{path: 'viewModel>/liveTimer', formatter: '.formatter.msToMinutesAndSeconds'}" class="sapUiSmallMarginTop" visible="{viewModel>/recordingRunning}" />
             </VBox>
 
-            <List items="{path: 'viewModel>/textData/', sorter: { path: 'title', descending: true } }" noDataText="No Text recorded yet" visible="{= ${viewModel>/textData}.length > 0}" >
+            <List items="{path: 'viewModel>/textData/', sorter: { path: 'id', descending: true } }" noDataText="No Text recorded yet" visible="{= ${viewModel>/textData}.length > 0}" >
                 <CustomListItem class="textList">
                     <VBox alignItems="Center" alignContent="Center" class="greyMessageBox" >
                         <Text text="{viewModel>title}" class="blueText sapUiTinyMarginTopBottom sapUiTinyMarginBeginEnd" />

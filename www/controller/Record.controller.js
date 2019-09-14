@@ -102,6 +102,7 @@ sap.ui.define([
 			var sTime = this.formatter.msToMinutesAndSeconds(sMilliSeconds);
 
 			var oData = {
+				"id": oListCount, 
 				"title": this._getDateTime(), 
 				"time": sTime, 
 				"text": oViewModel.getProperty("/textInput")
